@@ -15,4 +15,4 @@ public class Bern
         }
     }
 }
-
+// Output is: 1 2 3 4 5 6 7 (notice once 7 is reached the loop is terminated)
