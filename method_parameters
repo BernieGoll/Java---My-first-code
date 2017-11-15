@@ -1,1 +1,18 @@
-
+public class BernParam
+{
+    static void bMethod(String model)
+    {
+        System.out.println("One Chevy model is: " + model);
+    }
+    public static void main(String[] args)
+        {
+            bMethod("Camaro");
+            bMethod("Corvette");
+            bMethod("Impala");
+        }
+}
+/* Output:
+One Chevy model is: Camaro
+One Chevy model is: Corvette
+One Chevy model is: Impala
+*/
