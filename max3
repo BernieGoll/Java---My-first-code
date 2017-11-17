@@ -1,1 +1,48 @@
+import java.util.Scanner;
+
+public class Application
+{
+// program finds max, min and median numbers of a 3 # array
+	public static void main(String[] args)
+	{
+		System.out.println("Please enter 3 numbers\n");
+		Scanner input = new Scanner(System.in);
+		int num1 = input.nextInt();
+		int num2 = input.nextInt();
+		int num3 = input.nextInt();
+		int maxResult = max3(num1, num2, num3);
+		int minResult = min3(num1, num2, num3);
+		int medResult = med3(num1, num2, num3);
+		System.out.println("The result of max3 is: "+maxResult);
+		System.out.println("The result of min3 is: "+minResult);
+		System.out.println("The result of med3 is: "+medResult);
+	}
+	public static int max3(int v1, int v2, int v3)
+	{
+		int max = v1;
+		if(v2> max)
+			max = v2;
+		if(v3>max)
+			max = v3;
+		return max;						
+	}
+	public static int min3(int v1, int v2, int v3)
+	{
+		int min = v1;
+		if(v2< min)
+			min = v2;
+		if(v3<min)
+			min = v3;
+		return min;
+	}
+	public static int med3(int v1, int v2, int v3)
+	{
+		int sum = (v1 + v2 + v3);
+		int max = max3(v1, v2, v3);
+		int min = min3(v1, v2, v3);
+		int med = ((sum - min) - (sum - max));
+		return med;
+	}		
+}
+
 
